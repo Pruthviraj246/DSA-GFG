@@ -1,0 +1,9 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/number-of-nges-to-the-right/1?utm_source=chatgpt.com">Count Greater on Right Queries</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18.6667px;">Given an array <strong>arr[] </strong>and <strong>q</strong> queries, where each query contains an index <strong>indices[i].</strong> For each query, determine the count of elements in <strong>arr[]</strong> that are strictly greater than <strong>arr[indices[i]]</strong> and occur to its right.</span></p>
+<p><span style="font-size: 18.6667px;">Return the count for each query in the same order as the given queries.</span></p>
+<p><span style="font-size: 14pt;"><strong>Examples :</strong></span></p>
+<pre><span style="font-size: 14pt;"><strong>Input: </strong>arr[] = [3, 4, 2, 7, 5, 8, 10, 6], queries = 2, indices[] = [0, 5]
+<strong>Output:</strong> [6, 1]
+<strong>Explanation: </strong>Greater elements to the right of 3(index 0) are 4,7,5,8,10,6. Greater elements to the right of 8(index 5) is only 1.</span></pre>
+<pre><span style="font-size: 14pt;"><strong>Input: </strong>arr[] = [1, 2, 3, 4, 1], queries = 2, indices[] = [0, 3]
+<strong>Output: </strong>[3, 0]
+<strong>Explanation: </strong>The count of numbers to the right of index 0 which are greater than arr[0] is 3 i.e. (2, 3, 4). Similarly, the count of numbers to the right of index 3 which are greater than arr[3] is 0, since there are no greater elements than 4 to the right of the array.</span></pre></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Tree</code>&nbsp;

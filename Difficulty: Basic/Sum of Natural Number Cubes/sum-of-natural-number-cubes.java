@@ -4,7 +4,7 @@ class Solution {
            return 0;
        }
        
-       int digits=(n*n*n)+sumOfSeries(n-1);
-       return digits;
+       return (n*n*n)+sumOfSeries(n-1);
+       
     }
 }

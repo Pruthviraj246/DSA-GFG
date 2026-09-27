@@ -1,12 +1,16 @@
 class Solution {
     public void reverseArray(int arr[]) {
-       reverse(arr,arr.length-1,0);
+        reverse(arr,0,arr.length-1);
+        
     }
     
-    static void reverse(int[] arr,int lastindex,int firstindex){
-        if(firstindex>lastindex) return;
-        swap(arr,firstindex,lastindex);
-        reverse(arr,lastindex-1,firstindex+1);
+    static void reverse(int[] arr,int first,int last){
+        if(first>last){
+            return;
+        }
+        swap(arr,first,last);
+        reverse(arr,first+1,last-1);
+        
     }
     
     static void swap(int[] arr,int a,int b){

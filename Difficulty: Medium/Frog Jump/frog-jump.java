@@ -2,7 +2,10 @@ class Solution {
     int minCost(int[] height) {
         int n=height.length;
         ArrayList<Integer> list=new ArrayList<>(Collections.nCopies(n,-1));
-        int ans=mem(n-1,height,list);
+        // int ans=mem(n-1,height,list);
+        // return ans;
+        
+        int ans=tab(n,height,list);
         return ans;
     }
     
@@ -17,5 +20,20 @@ class Solution {
         int min=Math.min(left,right);
         list.set(n,min);
         return list.get(n);
+    }
+    
+    static int tab(int n,int[] height,ArrayList<Integer> list){
+        list.set(0,0);
+        for(int i=1;i<n;i++){
+            int first=list.get(i-1)+Math.abs(height[i]-height[i-1]);
+            int second=Integer.MAX_VALUE;
+            if(i>1){
+                second=list.get(i-2)+Math.abs(height[i]-height[i-2]);
+            }
+            int min=Math.min(first,second);
+            list.set(i,min);
+        }
+        return list.get(n-1);
+        
     }
 }
